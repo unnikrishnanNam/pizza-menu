@@ -15,7 +15,7 @@ body {
   color: #252525;
   font-weight: 400;
   background-color: #f7f2e9;
-  border-bottom: 1.6rem solid #edc84b;
+  border-bottom: 1.6rem solid tomato;
   min-height: 100vh;
   padding: 3.2rem;
   padding-bottom: 6rem;
@@ -39,13 +39,13 @@ body {
 
 .header h1 {
   /* Non-accessible color */
-  color: #edc84b;
+  color: tomato;
   /* color: #af8602; */
 
   text-transform: uppercase;
   text-align: center;
   font-size: 5.2rem;
-  font-weight: 300;
+  font-weight: 100;
   letter-spacing: 3px;
   position: relative;
   width: 100%;
@@ -57,19 +57,19 @@ body {
   display: block;
   content: "";
   height: 3px;
-  width: 12rem;
-  background-color: #edc84b;
+  width: 100%;
+  background-color: tomato;
   position: absolute;
-  top: calc(50% - 1px);
+  /* top: calc(50%); */
 }
 
-.header h1::before {
-  left: 0;
+/* .header h1::before {
+  left: -100px;
 }
 
 .header h1::after {
-  right: 0;
-}
+  right: -75px;
+} */
 
 /* *************** */
 
@@ -83,12 +83,12 @@ body {
 .menu h2 {
   display: inline-block;
   padding: 1rem 0;
-  border-top: 2px solid currentColor;
-  border-bottom: 2px solid currentColor;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
   font-size: 2.4rem;
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-weight: 500;
+  font-weight: lighter;
 }
 
 .menu > p {
