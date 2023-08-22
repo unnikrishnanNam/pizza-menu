@@ -21,13 +21,16 @@ const pizzaData = [
   },
 ];
 
-function Pizza({ prop }) {
+function Pizza(props) {
   return (
-    <>
-      <h3>{prop.name}</h3>
-      <p>{prop.ingredients}</p>
-      <img alt={prop.name} src={prop.imageURL} height={120} />
-    </>
+    <div className="pizza">
+      <img alt={props.name} src={props.imageURL} height={120} />
+      <div>
+        <h3>{props.name}</h3>
+        <p>{props.ingredients}</p>
+        <span>₹{props.price}</span>
+      </div>
+    </div>
   );
 }
 
@@ -43,8 +46,13 @@ function Menu() {
   return (
     <div className="menu">
       <h2>Our Menu</h2>
-      <Pizza prop={pizzaData[0]} />
-      <Pizza prop={pizzaData[1]} />
+      <Pizza
+        name="Focaccia"
+        ingredients="Bread with italian olive oil and rosemary"
+        imageURL="https://www.cookingchanneltv.com/content/dam/images/cook/fullset/2011/1/6/0/CCEV103_Margherita-Pizza_s4x3.jpg"
+        price={600}
+        soldOut={false}
+      />
     </div>
   );
 }
