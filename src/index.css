@@ -111,9 +111,11 @@ body {
 }
 
 .pizza img {
-  width: 12rem;
-  aspect-ratio: 1;
-  align-self: start;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 0.8rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
 }
 
 .pizza div {

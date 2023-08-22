@@ -46,13 +46,17 @@ function Menu() {
   return (
     <div className="menu">
       <h2>Our Menu</h2>
-      <Pizza
-        name="Focaccia"
-        ingredients="Bread with italian olive oil and rosemary"
-        imageURL="https://www.cookingchanneltv.com/content/dam/images/cook/fullset/2011/1/6/0/CCEV103_Margherita-Pizza_s4x3.jpg"
-        price={600}
-        soldOut={false}
-      />
+      <div>
+        {pizzaData.map((pizza) => (
+          <Pizza
+            key={pizza.name}
+            name={pizza.name}
+            ingredients={pizza.ingredients}
+            imageURL={pizza.imageURL}
+            price={pizza.price}
+          />
+        ))}
+      </div>
     </div>
   );
 }
